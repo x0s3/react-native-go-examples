@@ -1,0 +1,8 @@
+framework module "RnSample" {
+	header "ref.h"
+    header "RnSample.objc.h"
+    header "Universe.objc.h"
+    header "RnSample.h"
+
+    export *
+}
