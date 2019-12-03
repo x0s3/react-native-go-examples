@@ -6,9 +6,8 @@
 - [Parte 2](https://dev.to/x0s3/modulos-nativos-para-react-native-con-go-2-4-jjk)
     - Creación del modulo de Go
 
-- [Parte 3]()
+- [Parte 3](https://dev.to/x0s3/modulos-nativos-para-react-native-con-go-3-4-40o7)
     - Bridge RN
 
 - [Parte 4]()
-    - JSI RN
-
+    - JSI/TurboModules RN
