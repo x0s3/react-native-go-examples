@@ -6,12 +6,12 @@ import {
   StyleSheet,
   SafeAreaView,
 } from 'react-native';
-import { useNativeCounter } from './hooks/use-native-counter';
+import { useBridgeCounter } from './hooks/use-native-counter';
 
 export default function Counter() {
   const [numberX, setNumberX] = useState<number>();
   const [numberY, setNumberY] = useState<number>();
-  const { counter, isWorking, syncSum, asyncSum } = useNativeCounter();
+  const { counter, isWorking, syncSum, asyncSum } = useBridgeCounter();
 
   const callbackSync = useCallback(() => {
     syncSum(numberX, numberY);
@@ -25,12 +25,12 @@ export default function Counter() {
     <SafeAreaView style={styles.rootView}>
       <Text>Counter value: {counter}</Text>
       <TextInput
-        onChangeText={x => setNumberX(parseInt(x))}
+        onChangeText={(x) => setNumberX(Number(x))}
         keyboardType={'numeric'}
         value={numberX ? numberX.toString() : '0'}
       />
       <TextInput
-        onChangeText={y => setNumberY(parseInt(y))}
+        onChangeText={(y) => setNumberY(Number(y))}
         keyboardType={'numeric'}
         value={numberY ? numberY.toString() : '0'}
       />
