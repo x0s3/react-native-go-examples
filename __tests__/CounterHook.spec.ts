@@ -1,6 +1,6 @@
 import 'react-native';
 import { renderHook, act } from '@testing-library/react-hooks';
-import { useBridgeCounter } from '../src/hooks/use-native-counter';
+import { useBridgeCounter } from '../src/hooks/use-bridge-counter';
 
 // mock our native go methods :)
 jest.mock('react-native', () => ({
